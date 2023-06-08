@@ -1,0 +1,102 @@
+:root {
+    --variable_1_0-3: rgba(242, 242, 242, 0.3);
+    --variable_1_0-5: rgba(242, 242, 242, 0.5);
+    --variable_1_0-7: rgba(242, 242, 242, 0.7);
+    --variable_1_0-9: rgba(242, 242, 242, 0.9);
+    --variable_1_1: rgba(242, 242, 242, 1);
+
+    --variable_2_0-3: rgba(147, 187, 191, 0.3);
+    --variable_2_0-5: rgba(147, 187, 191, 0.5);
+    --variable_2_0-7: rgba(147, 187, 191, 0.7);
+    --variable_2_0-9: rgba(147, 187, 191, 0.9);
+    --variable_2_1: rgba(147, 187, 191, 1);
+
+    --variable_3_0-3: rgba(55, 67, 66, 0.3);
+    --variable_3_0-5: rgba(55, 67, 66, 0.5);
+    --variable_3_0-7: rgba(55, 67, 66, 0.7);
+    --variable_3_0-9: rgba(55, 67, 66, 0.9);
+    --variable_3_1: rgba(55, 67, 66, 1);
+
+    --variable_4_0-1: rgba(137, 155, 159, 0.1);
+    --variable_4_0-3: rgba(137, 155, 159, 0.3);
+    --variable_4_0-5: rgba(137, 155, 159, 0.5);
+    --variable_4_0-7: rgba(137, 155, 159, 0.7);
+    --variable_4_0-9: rgba(137, 155, 159, 0.9);
+    --variable_4_1: rgba(137, 155, 159, 1);
+
+    --variable_5_0-1: rgba(13, 13, 13, 0.1);
+    --variable_5_0-2: rgba(13, 13, 13, 0.2);
+    --variable_5_0-3: rgba(13, 13, 13, 0.3);
+    --variable_5_0-5: rgba(13, 13, 13, 0.5);
+    --variable_5_0-7: rgba(13, 13, 13, 0.7);
+    --variable_5_0-9: rgba(13, 13, 13, 0.9);
+    --variable_5_1: rgba(13, 13, 13, 1);
+
+    --btn_Save: rgba(147, 187, 191, 0.7);
+    --btn_Cancel: rgba(137, 155, 159, 1);
+}
+
+.contenido{
+    max-width: 100%;
+    min-width: auto;
+    margin-top: 20px;
+    background-color: var(--variable_1_1);
+    min-height: 75vh;
+    max-height: 91vh;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    font-size: 18px;
+}
+
+.contenido div:nth-child(3){
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+}
+
+.contenido label {
+    display: flex;
+    width: 100%;
+    gap:15px;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.contenido select{
+    height: 4vh;
+    width: 100%;
+    border: 2px solid var(--variable_5_0-7);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* .contenido select option{
+    
+} */
+
+.contenido div:nth-child(4){
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.contenido input[type=submit]{
+    width: 40%;
+    background-color: var(--btn_Save);
+}
+
+.contenido input[type=button]{
+    width: 50%;
+    background-color: var(--btn_Cancel);
+}

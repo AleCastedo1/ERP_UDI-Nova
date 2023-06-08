@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+.modalHTML{
+    font-family: 'Montserrat',sans-serif;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,0.7);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+    z-index: 90;
+}
+
+.modalHTML:target{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal__container{
+    margin: auto;
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1em;
+}
+
+.modalHTML:target .modal__container{
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show{
+    0%{
+        transform: translateY(-150vh);
+    }
+}
+
+.modal__picture{
+    width: 90%;
+    margin:0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+}
+
+.modalHTML:target .modal__picture{
+    animation: scale .5s 1.5s backwards;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+}
+
+.modal__img{
+    width: 100%;
+    display: block;
+}
+
+.modal__title{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.moda__title--bold{
+    font-weight: 700;
+}
+
+.modal__paragraph{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.modal__close{
+    display: inline-block;
+    border: 1px solid;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: 700;
+    color:#333;
+    border-radius: .4em;
+}
+
+.modal__close:hover{
+    background-color: rgba(0, 0, 0,0.2);
+}
+
+@media (max-width:600){
+    .modal__title{
+        font-size: 1.7rem;
+    }
+}

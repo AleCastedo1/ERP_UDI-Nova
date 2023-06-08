@@ -1,0 +1,317 @@
+:root {
+    --variable_1_0-3: rgba(242, 242, 242, 0.3);
+    --variable_1_0-5: rgba(242, 242, 242, 0.5);
+    --variable_1_0-7: rgba(242, 242, 242, 0.7);
+    --variable_1_0-9: rgba(242, 242, 242, 0.9);
+    --variable_1_1: rgba(242, 242, 242, 1);
+
+    --variable_2_0-3: rgba(147, 187, 191, 0.3);
+    --variable_2_0-5: rgba(147, 187, 191, 0.5);
+    --variable_2_0-7: rgba(147, 187, 191, 0.7);
+    --variable_2_0-9: rgba(147, 187, 191, 0.9);
+    --variable_2_1: rgba(147, 187, 191, 1);
+
+    --variable_3_0-1: rgba(55, 67, 66, 0.1);
+    --variable_3_0-3: rgba(55, 67, 66, 0.3);
+    --variable_3_0-5: rgba(55, 67, 66, 0.5);
+    --variable_3_0-7: rgba(55, 67, 66, 0.7);
+    --variable_3_0-9: rgba(55, 67, 66, 0.9);
+    --variable_3_1: rgba(55, 67, 66, 1);
+
+    --variable_4_0-1: rgba(137, 155, 159, 0.1);
+    --variable_4_0-3: rgba(137, 155, 159, 0.3);
+    --variable_4_0-5: rgba(137, 155, 159, 0.5);
+    --variable_4_0-7: rgba(137, 155, 159, 0.7);
+    --variable_4_0-9: rgba(137, 155, 159, 0.9);
+    --variable_4_1: rgba(137, 155, 159, 1);
+
+    --variable_5_0-1: rgba(13, 13, 13, 0.1);
+    --variable_5_0-2: rgba(13, 13, 13, 0.2);
+    --variable_5_0-3: rgba(13, 13, 13, 0.3);
+    --variable_5_0-5: rgba(13, 13, 13, 0.5);
+    --variable_5_0-7: rgba(13, 13, 13, 0.7);
+    --variable_5_0-9: rgba(13, 13, 13, 0.9);
+    --variable_5_1: rgba(13, 13, 13, 1);
+
+    --iconos_I: var(--variable_3_0-9);
+    --folderRoot: rgba(93, 93, 93,0.5);
+}
+
+#contenido {
+    width: 90%;
+    height: 87vh;
+    margin: 2vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: initial;
+    color: var(--variable_3_0-9);
+}
+
+#board-Cuenta {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+#cabezaCuenta {
+    width: 80%;
+    height: 8%;
+    background-color: var(--variable_1_1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid var(--variable_5_1);
+    position: relative;
+}
+
+#Listado-Cuentas {
+    width: 80%;
+    height: 90%;
+    background-color: var(--variable_2_0-3);
+    border-radius: 0px 0px 20px 20px;
+    padding: 30px;
+    text-align: start;
+    border: 1px solid var(--variable_5_1);
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#nuevo_arbol {
+    width: 150px;
+    background-color: transparent;
+    font-weight: 700;
+    color: #4D5958;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.i-arbol {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.i-arbol:hover {
+    font-size: 22px;
+    transition: .3s;
+}
+
+#accionesDiv {
+    height: 300px;
+    width: 70px;
+    background-color: var(--variable_3_0-3);
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+}
+
+#accionesDiv button {
+    color: var(--variable_3_0-5);
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--variable_4_0-7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#accionesDiv button:hover {
+    width: 54px;
+    height: 54px;
+    font-size: 34px;
+    transition: .3s;
+}
+
+#accionesDiv button:focus {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    transition: .2s;
+}
+
+#accionesDiv button:focus::after {
+    height: 30px;
+    position: absolute;
+    background-color: var(--variable_1_1);
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    left: 90%;
+    font-size: 12px;
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    color: var(--variable_5_0-7);
+}
+
+
+#accionesDiv button:nth-child(2):focus::after {
+    content: "Seleccione una cuenta para agregar";
+    width: 220px;
+    top: 33%;
+}
+
+#accionesDiv button:nth-child(3):focus::after {
+    content: "Seleccione la cuenta para editar";
+    width: 210px;
+    top: 57.2%;
+
+}
+
+#accionesDiv button:nth-child(4):focus::after {
+    content: "Eliminar Nodo";
+    width: 100px;
+    top: 82%;
+}
+
+#sinpadreFunction {
+    display: flex;
+    position: absolute;
+    top: 113%;
+    left: 4.5%;
+    color: var(--folderRoot);
+    font-size: 20px;
+    padding: 3px;
+    border-radius: 5px;
+    z-index: 9;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 600;
+}
+#sinpadreFunction:hover {
+    transition: .3s;
+    background-color: var(--variable_1_0-7);
+}
+
+#pantallaso,
+#pantallasoDelete {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#mensaje-delete-cuenta {
+    width: 40%;
+    padding: 30px;
+    border-radius: 23px;
+    text-align: center;
+    background-color: var(--variable_1_1);
+    height: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-radius: 30px;
+}
+
+.print-PC{
+    position: absolute;
+    font-size: 30px;
+    top: 17px;
+    left: 15px;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--iconos_I);
+}
+
+.print-PC:hover{
+    top: 15px;
+    font-size: 34px;
+    transition: .3s;
+}
+
+#eliminarDrag{
+    display: none;
+    position: absolute;
+    inset: 0px 0px 0px 450px;
+    margin:auto;
+    height: 80px;
+    transition: .7s;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#eliminarDrag i{
+    color: var(--iconos_I);
+    font-size: 80px;
+    transition: .7s;
+}
+
+@media screen and (max-width: 440px) {
+    #contenido,#board-Cuenta{
+        width: 100%;
+    }
+
+    #accionesDiv{
+        height: 200px;
+        width: 40px;
+    }
+    #accionesDiv button{
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+    #accionesDiv button:focus{
+        height: 36px;
+        width: 36px;
+        font-size: 23px;
+    }
+
+    #accionesDiv button:focus::after{
+        height: 25px;
+    }
+    #accionesDiv button:nth-child(2):focus::after{
+        left: -555%;
+        top: 31.5%;
+    }
+    #accionesDiv button:nth-child(3):focus::after{
+        left: -530%;
+        top: 56%;
+    }
+    #accionesDiv button:nth-child(4):focus::after{
+        left: -260%;
+        top: 80%;
+    }
+    #sinpadreFunction{
+        top: 110%;
+        right: 2%;
+        height: 22px;
+        font-size: 11px;
+        width: 80px;
+    }
+    #sinpadreFunction:focus{
+        height: 24px;
+        width: 90px;
+        font-size: 12px;
+    }
+    #Listado-Cuentas{
+        padding: 30px 10px;
+        font-size: 12px;
+    }
+    #nuevo_arbol{
+        width: 90px;
+        font-size: 12px;
+    }
+}

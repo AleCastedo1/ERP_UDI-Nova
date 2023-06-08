@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado y Resultado</title>
+    <link rel="shortcut icon" href="/images/empresa.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14918585ae.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="/css/Iconos/css/all.css">
+    <link rel="stylesheet" href="/css/inicioEstilos.css">
+    <link rel="stylesheet" href="/css/Reportes/BalanceInicialEstilos.css">
+    
+    <script src="/js/javaScript.js"></script>
+    <script src="/js/Empresa/EmpresaCode.js"></script>
+    <script src="/js/Usuario/UsuarioCode.js"></script>
+    <script src="/js/Gestion/GestionCode.js"></script>
+    <script src="/js/Moneda/MonedaCode.js"></script>
+</head>
+
+<body>
+    <div style="width: 100%; height: 100%; display: flex; flex-flow: row nowrap; position: relative;">
+        <nav class="nav-menu" id="nav_menu">
+            <div id="Logo_Menu">
+                <img src="/images/Erp_logo.png" id="img-logo">
+            </div>
+
+            <ul class="List-Menu" id="List-Menu">
+                <li>
+                    <a onclick='newDirigirXnombre("Inicio")'><i class="iconos fa-solid fa-house"></i> <span>
+                            Inicio</span></a>
+                </li>
+
+                <li>
+                    <a><i class="iconos fa-solid fa-file-waveform"></i><span> Contabilidad</span></a>
+                    <ul id="ulNro1">
+                        <li><a onclick='newDirigirXnombre("Plan_Cuentas")'><i class="fas fa-file-invoice"></i> <span>
+                                    Cuentas</span></a></li>
+                        <li><a onclick='newDirigirXnombre("Comprobante")'><i
+                                    class="fa-sharp fa-solid fa-file-invoice-dollar"></i> <span>
+                                    Comprobante</span></a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a><i class="iconos fa-solid fa-gear"></i><span>Configuracion</span></a>
+                    <ul id="ulNro2">
+                        <li><a onclick='newDirigirXnombre("Gestion")'><i class="fas fa-solid fa-business-time"></i>
+                                <span> Gestiones</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a onclick='newDirigirXnombre("Moneda")'>
+                                <i class="fas fa-sharp fa-solid fa-coins"></i>
+                                <span> Monedas</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("CuentaIntegracion")'>
+                                <i class="fa-solid fa-user-gear"></i>
+                                <span> Cuentas de Int.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a><i class="iconos fa-solid fa-clipboard-list"></i><span>Reportes</span></a>
+                    <ul id="ulNro3">
+                        <li>
+                            <a onclick='newDirigirXnombre("BalanceInicial")'>
+                                <i class="fa-solid fa-scale-balanced"></i>
+                                <span> Balance Inicial</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("LibroDiario")'>
+                                <i class="fa-solid fa-book"></i>
+                                <span> Libro Diario</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("LibroMayor")'>
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <span> Libro Mayor</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("SumaSaldo")'>
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                                <span> Suma y Saldos</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("BalanceGeneral")'>
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span> Balance General</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("EstadoResultado")'>
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span> Estado Resultado</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a><i class="fa-solid fa-layer-group"
+                            style="font-size: 24px !important;"></i><span>Inventario</span></a>
+                    <ul id="ulNro4">
+                        <li>
+                            <a onclick='newDirigirXnombre("Categoria")'>
+                                <i class="fa-solid fa-tags"></i>
+                                <span> Categoria</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("Articulo")'>
+                                <i class="fa-regular fa-newspaper"></i>
+                                <span> Articulo</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("NotaCompra")'>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span> Compra</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a onclick='newDirigirXnombre("NotaCompraVenta")'>
+                                <i class="fa-solid fa-shop"></i>
+                                <span> Venta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div
+                style="display: flex; height: 25%; width: 100%; align-items: flex-end; justify-content: center; padding-bottom: 20px;">
+                <li><i class="icono-hide fa-solid fa-right-from-bracket" onclick='dirigirEnlace("Gatos")'></i></li>
+            </div>
+        </nav>
+        <div id="cuerpo2">
+            <header id="header-Nav">
+                <h1 id="h1-header"></h1>
+                <div id="header-User">
+                    <img src="/images/user-ini-1-1.png" alt="" id="img-user">
+                    <div id="option-user">
+                        <ul>
+                            <li style="border-bottom: 1px solid rgba(0,0,0,0.2); border-radius: 0px 0px 20px 20px;">
+                                <i class="fas fa-user">&nbsp</i>
+                                <p style="text-transform: uppercase;" id="name-User">G2 Mimi</p>
+                            </li>
+                            <li><a onclick='dirigirEnlace("Empresa")'>Cambiar de empresa</a></li>
+                            <li><a onclick='dirigirEnlace("Gatos")'>Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div id="cuerpo2-1">
+                <div class="contenido">
+                    <form action="" method="post" id="formEstRes" class="Form_Report">
+                        <h1>Estado Y Resultado</h1>
+
+                        <Label class="labelSelect">
+                            Seleccionar Gestion: 
+                            <select name="gestionesDatos" id="gestionesDatos" class="select" required>
+                            </select>
+                        </Label>
+
+                        <Label class="labelSelect">
+                            Seleccionar Moneda: 
+                            <select name="monedasActivas" id="monedasActivas" class="select" required>
+                            </select>
+                        </Label>
+
+                        <button id="mostrarID" class="btn">Obtener Reporte</button>
+                    </form>
+
+                    <iframe src="" id="iFrameInformes" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/javaScript.js"></script>
+    <script src="/js/Reportes/funcionalidadesReports.js"></script>
+</body>
+
+</html>

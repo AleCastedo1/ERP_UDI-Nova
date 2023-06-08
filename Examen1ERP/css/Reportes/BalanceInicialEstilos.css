@@ -1,0 +1,105 @@
+:root {
+    --variable_1_0-3: rgba(242, 242, 242, 0.3);
+    --variable_1_0-5: rgba(242, 242, 242, 0.5);
+    --variable_1_0-7: rgba(242, 242, 242, 0.7);
+    --variable_1_0-9: rgba(242, 242, 242, 0.9);
+    --variable_1_1: rgba(242, 242, 242, 1);
+
+    --variable_2_0-3: rgba(147, 187, 191, 0.3);
+    --variable_2_0-5: rgba(147, 187, 191, 0.5);
+    --variable_2_0-7: rgba(147, 187, 191, 0.7);
+    --variable_2_0-9: rgba(147, 187, 191, 0.9);
+    --variable_2_1: rgba(147, 187, 191, 1);
+
+    --variable_3_0-3: rgba(55, 67, 66, 0.3);
+    --variable_3_0-5: rgba(55, 67, 66, 0.5);
+    --variable_3_0-7: rgba(55, 67, 66, 0.7);
+    --variable_3_0-9: rgba(55, 67, 66, 0.9);
+    --variable_3_1: rgba(55, 67, 66, 1);
+
+    --variable_4_0-1: rgba(137, 155, 159, 0.1);
+    --variable_4_0-3: rgba(137, 155, 159, 0.3);
+    --variable_4_0-5: rgba(137, 155, 159, 0.5);
+    --variable_4_0-7: rgba(137, 155, 159, 0.7);
+    --variable_4_0-9: rgba(137, 155, 159, 0.9);
+    --variable_4_1: rgba(137, 155, 159, 1);
+
+    --variable_5_0-1: rgba(13, 13, 13, 0.1);
+    --variable_5_0-2: rgba(13, 13, 13, 0.2);
+    --variable_5_0-3: rgba(13, 13, 13, 0.3);
+    --variable_5_0-5: rgba(13, 13, 13, 0.5);
+    --variable_5_0-7: rgba(13, 13, 13, 0.7);
+    --variable_5_0-9: rgba(13, 13, 13, 0.9);
+    --variable_5_1: rgba(13, 13, 13, 1);
+
+    --btn_Save: rgba(147, 187, 191, 0.7);
+    --btn_Cancel: rgba(137, 155, 159, 1);
+    --fondoPantallaso: rgba(0, 0, 0, 0.3);
+    --colorIconos: rgba(55, 67, 66, 1);
+}
+
+.contenido {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 91vh;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+}
+
+.Form_Report {
+    height: 40vh;
+    width: 49%;
+    border-radius: 35px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--variable_2_0-3);
+    color: var(--variable_5_0-7);
+    border: 3px solid var(--variable_2_0-5);
+}
+
+.select {
+    height: 35px;
+    width: 70%;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: var(--variable_5_0-9);
+}
+
+.select option {
+    font-size: 16px;
+    padding: 10px;
+    background-color: var(--variable_1_1);
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.select option:checked {
+    background-color: var(--variable_4_1);
+    color: #fff;
+}
+
+.labelSelect {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+#iFrameInformes {
+    width: 48.5%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#mostrarID{
+    color: var(--variable_3_0-9);
+    background-color: var(--variable_1_1);
+}

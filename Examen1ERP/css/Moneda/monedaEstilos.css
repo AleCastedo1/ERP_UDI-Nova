@@ -1,0 +1,175 @@
+:root {
+    --variable_1_0-3: rgba(242, 242, 242, 0.3);
+    --variable_1_0-5: rgba(242, 242, 242, 0.5);
+    --variable_1_0-7: rgba(242, 242, 242, 0.7);
+    --variable_1_0-9: rgba(242, 242, 242, 0.9);
+    --variable_1_1: rgba(242, 242, 242, 1);
+
+    --variable_2_0-3: rgba(147, 187, 191, 0.3);
+    --variable_2_0-5: rgba(147, 187, 191, 0.5);
+    --variable_2_0-7: rgba(147, 187, 191, 0.7);
+    --variable_2_0-9: rgba(147, 187, 191, 0.9);
+    --variable_2_1: rgba(147, 187, 191, 1);
+
+    --variable_3_0-3: rgba(55, 67, 66, 0.3);
+    --variable_3_0-5: rgba(55, 67, 66, 0.5);
+    --variable_3_0-7: rgba(55, 67, 66, 0.7);
+    --variable_3_0-9: rgba(55, 67, 66, 0.9);
+    --variable_3_1: rgba(55, 67, 66, 1);
+
+    --variable_4_0-1: rgba(137, 155, 159, 0.1);
+    --variable_4_0-3: rgba(137, 155, 159, 0.3);
+    --variable_4_0-5: rgba(137, 155, 159, 0.5);
+    --variable_4_0-7: rgba(137, 155, 159, 0.7);
+    --variable_4_0-9: rgba(137, 155, 159, 0.9);
+    --variable_4_1: rgba(137, 155, 159, 1);
+
+    --variable_5_0-1: rgba(13, 13, 13, 0.1);
+    --variable_5_0-2: rgba(13, 13, 13, 0.2);
+    --variable_5_0-3: rgba(13, 13, 13, 0.3);
+    --variable_5_0-5: rgba(13, 13, 13, 0.5);
+    --variable_5_0-7: rgba(13, 13, 13, 0.7);
+    --variable_5_0-9: rgba(13, 13, 13, 0.9);
+    --variable_5_1: rgba(13, 13, 13, 1);
+}
+
+#cuerpo-Moneda {
+    width: 85%;
+    height: 92vh;
+    padding-top: 40px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+}
+
+#form_MonEmp{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+#cuerpoForm{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255, 1);
+    border-radius: 2rem;
+    border: 2px solid var(--variable_5_0-2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuerpoForm div{
+    display: flex;
+    flex-flow:row wrap;
+    padding: 35px 0px;
+    flex:0 0 30%;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+}
+
+#cuerpoForm div input, #cuerpoForm div select{
+    margin-left: 10px;
+    flex-basis: 185px;
+    height: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 0 .25rem var(--variable_1_0-9);
+    background-color: var(--variable_1_0-3);
+    color: var(--variable_5_0-9);
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+#cuerpoForm div input:focus, #cuerpoForm div select:focus{
+    box-shadow: 0 0 0 .25rem var(--variable_2_0-7);
+}
+#div-btn-emp_mon{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#div-btn-emp_mon input[type='submit']{
+    height: 100%;
+    width: 28%;
+    border-radius: 1rem;
+    border: 3px solid var(--variable_5_0-5);
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--variable_5_0-7);
+    font-weight: 600;
+    background-color: rgba(255,255,255,1);
+    transition: .5s;
+    cursor: pointer;
+}
+#div-btn-emp_mon input[type='submit']:hover{
+    background-color: rgba(255,255,255,0.6);
+    padding-top: 4px;
+    font-size: 17px;
+    border: 3px solid var(--variable_5_0-3);
+    width: 30%;
+    transition: .6s;
+}
+
+#div-btn-emp_mon input[type='submit']:active{
+    font-size: 14px;
+    transition: .2s;
+    width: 26%;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: solid 1px var(--variable_4_1);
+}
+
+table thead {
+    background-color: var(--variable_3_0-7);
+}
+
+table th {
+    width: 25%;
+    border:2px solid var(--variable_1_0-5);
+    text-align: center;
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+table td {
+    width: 25%;
+    border:2px solid var(--variable_1_0-5);
+    text-align: center;
+    padding: 15px;
+}
+
+
+table tbody tr {
+    cursor: pointer;
+    background-color: var(--variable_2_0-7);
+}
+
+table tbody tr:hover {
+    background-color: var(--variable_4_0-5);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,48 @@
+
+* {
+    transition: 1.2s;
+}   
+
+.agrandar {
+    height: 70% !important;
+    width: 50% !important;
+    background-color: rgba(250, 0, 0, 0.6) !important;
+}
+
+.agrandar img{
+    width: 450px;
+}
+
+.agrandar img{
+    width: 450px;
+}
+
+.agrandar h1{
+    font-size: 40px;
+    color: rgba(255, 255, 247, 0.9);
+}
+
+.agrandar p{
+    font-size: 18px;
+    color: rgba(255, 255, 247, 0.9);
+}
+
+.agrandar a{
+    font-size: 18px;
+    color: rgba(0, 40, 242,0.5);
+}
+
+.content1 {
+    text-align: center;
+    width: 45%;
+    height: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 247, 1);
+    margin: auto;
+    border-radius: 30px;
+    gap: 10px;
+}
+

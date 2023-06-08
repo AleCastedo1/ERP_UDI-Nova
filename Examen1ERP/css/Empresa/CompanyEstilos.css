@@ -1,0 +1,409 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --variable_1_0-3: rgba(242, 242, 242, 0.3);
+    --variable_1_0-5: rgba(242, 242, 242, 0.5);
+    --variable_1_0-7: rgba(242, 242, 242, 0.7);
+    --variable_1_0-9: rgba(242, 242, 242, 0.9);
+    --variable_1_1: rgba(242, 242, 242, 1);
+
+    --variable_2_0-3: rgba(147, 187, 191, 0.3);
+    --variable_2_0-5: rgba(147, 187, 191, 0.5);
+    --variable_2_0-7: rgba(147, 187, 191, 0.7);
+    --variable_2_0-9: rgba(147, 187, 191, 0.9);
+    --variable_2_1: rgba(147, 187, 191, 1);
+
+    --variable_3_0-3: rgba(55, 67, 66, 0.3);
+    --variable_3_0-5: rgba(55, 67, 66, 0.5);
+    --variable_3_0-7: rgba(55, 67, 66, 0.7);
+    --variable_3_0-9: rgba(55, 67, 66, 0.9);
+    --variable_3_1: rgba(55, 67, 66, 1);
+
+    --variable_4_0-1: rgba(137, 155, 159, 0.1);
+    --variable_4_0-3: rgba(137, 155, 159, 0.3);
+    --variable_4_0-5: rgba(137, 155, 159, 0.5);
+    --variable_4_0-7: rgba(137, 155, 159, 0.7);
+    --variable_4_0-9: rgba(137, 155, 159, 0.9);
+    --variable_4_1: rgba(137, 155, 159, 1);
+
+    --variable_5_0-1: rgba(13, 13, 13, 0.1);
+    --variable_5_0-2: rgba(13, 13, 13, 0.2);
+    --variable_5_0-3: rgba(13, 13, 13, 0.3);
+    --variable_5_0-5: rgba(13, 13, 13, 0.5);
+    --variable_5_0-7: rgba(13, 13, 13, 0.7);
+    --variable_5_0-9: rgba(13, 13, 13, 0.9);
+    --variable_5_1: rgba(13, 13, 13, 1);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#pantalla {
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+}
+
+#cuerpo {
+    height: 40vh;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--variable_4_0-7);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 40px;
+    padding: 40px;
+}
+
+#cuerpo div {
+    width: 100%;
+}
+
+#btn-seleccion {
+    background-color: var(--variable_2_0-7);
+    color: var(--variable_3_1);
+    font-weight: 600;
+}
+
+#logOut {
+    color: var(--variable_5_1);
+    height: 100px;
+    font-size: 35px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    transition: .5s;
+}
+
+#ajustes {
+    color: var(--variable_5_1);
+    height: 100px;
+    font-size: 35px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: .5s;
+}
+
+#ajustes:hover,
+#logOut:hover {
+    cursor: pointer;
+    font-size: 40px;
+    transition: .5s;
+}
+
+#ajustes:hover::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -25px;
+    border-top: transparent solid 25px;
+    border-bottom: transparent solid 25px;
+    border-left: transparent solid 25px;
+    border-right: 25px solid var(--variable_1_0-7);
+    transform: .5s;
+}
+
+#ajustesOption {
+    display: none;
+    position: absolute;
+    background-color: var(--variable_1_0-7);
+    height: 100px;
+    width: 200px !important;
+    right: -225px !important;
+    top: -30px;
+    flex-flow: column nowrap;
+}
+
+#ajustesOption button:hover {
+    cursor: pointer;
+}
+
+#ajustesOption button {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    text-align: none;
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+    color: var(--variable_5_0-7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+#ajustes:hover #ajustesOption {
+    display: flex;
+}
+
+#ajustesOption button:hover {
+    background-color: var(--variable_1_0-5);
+}
+
+#pantallaso,
+#pantallaso2 {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#CompanyAdd-Update {
+    background-color: var(--variable_1_1);
+    height: auto;
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#delete-company {
+    background-color: var(--variable_1_1);
+    height: 50%;
+    width: 40%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#svg-delete {
+    width: 80%;
+}
+
+#form_Empresa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding: 0px 50px 0px 50px; /*Arriba Derecha Abajo Izquierda*/ 
+}
+
+#titleNewCompany {
+    color: var(--variable_5_0-7);
+}
+
+.formChill {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+#f-1{
+    flex-basis: 260px;
+}
+
+#f-2{
+    flex-basis: 260px;
+}
+
+#f-3{
+    flex-basis: 260px;
+}
+
+#f-4{
+    flex-basis: 260px;
+}
+
+#f-5{
+    flex-basis: 260px;
+}
+
+#f-6{
+    flex-basis: 260px;
+}
+
+#f-7{
+    flex-basis: 260px;
+}
+
+#f-8{
+    flex-basis: 260px;
+}
+
+.formChill div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.formChill div input, .formChill select {
+    display: flex;
+    height: 100%;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.formChill div input,
+.formChill div textarea,
+.formChill select{
+    border: none;
+    border-radius: 10px;
+    border: 2px solid var(--variable_4_0-5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formChill div input:focus,
+.formChill div textarea:focus {
+    box-shadow: 0 0 0 .25rem var(--variable_4_0-3);
+}
+
+.formChill textarea {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.formChill div label {
+    flex-grow: 1;
+    text-align: center;
+    height: 100%;
+}
+
+#print-bt {
+    font-size: 32px;
+    color: var(--variable_5_1);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transition: .5s;
+}
+
+#print-bt:hover {
+    font-size: 35px;
+    transition: .5s;
+}
+
+#SelectCompanyJS{
+    width: 100%;
+}
+
+#button-save{
+    background-color: var(--variable_2_0-5);
+}
+
+#cerrarAddUpd{
+    background-color: var(--variable_3_0-5);
+}
+
+@media screen and (max-width: 1640px) {
+    #CompanyAdd-Update {
+        height: auto;
+    }
+    #Cabeza_Select{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .formChill{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    #cuerpo {
+        width: 65%;
+    }
+
+    #form_Empresa {
+        gap: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 830px) {
+    #form_Empresa {
+        gap: 20px;
+    }
+
+    #cuerpo {
+        width: 75%;
+    }
+
+    #CompanyAdd-Update {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    #form_Empresa {
+        gap: 10px;
+    }
+    
+    #cuerpo {
+        width: 80%;
+    }
+
+    #CompanyAdd-Update {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #CompanyAdd-Update {
+        width: auto;
+    }
+
+    #cuerpo {
+        width: 92%;
+    }
+
+    .btn{
+        font-size: 13px;
+    }
+    #CompanyAdd-Update{
+        width: 90%;
+    }
+}
