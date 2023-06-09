@@ -1,5 +1,5 @@
 function GetBDCategoria_X_Empresa(done, idEmpresa) {
-    const result = fetch("https://localhost:7281/Categoria/ListarCategoria?id=" + idEmpresa);
+    const result = fetch("https://microservicios-erp-udinova.azurewebsites.net/Categoria/ListarCategoria?id=" + idEmpresa);
     result.then(response => response.json()).then(data => {
         done(data);
     }).catch(error => {
@@ -9,7 +9,7 @@ function GetBDCategoria_X_Empresa(done, idEmpresa) {
 }
 
 function GetBDCategoria_X_ID(done, idEmpresa) {
-    const result = fetch("https://localhost:7281/Categoria/searchCategoriaID?id=" + idEmpresa);
+    const result = fetch("https://microservicios-erp-udinova.azurewebsites.net/Categoria/searchCategoriaID?id=" + idEmpresa);
     result.then(response => response.json()).then(data => {
         done(data);
     }).catch(error => {
@@ -19,7 +19,7 @@ function GetBDCategoria_X_ID(done, idEmpresa) {
 }
 
 SaveDataCategoria = async (categoriaOBJ,scroll) => {
-    await fetch("https://localhost:7281/Categoria/agregarCategoria", {
+    await fetch("https://microservicios-erp-udinova.azurewebsites.net/Categoria/agregarCategoria", {
         method: "POST",
         body: JSON.stringify(categoriaOBJ),
         headers: {
@@ -51,7 +51,7 @@ function crearNodo(objCategoria, ID_Categoria,scroll){
 
 
 UpdateDataCategoria = async (id_Categoria, nombreCat) => {
-    await fetch("https://localhost:7281/Categoria/UpdateCategoria?id1="+id_Categoria+"&id2="+nombreCat, {
+    await fetch("https://microservicios-erp-udinova.azurewebsites.net/Categoria/UpdateCategoria?id1="+id_Categoria+"&id2="+nombreCat, {
         method: "POST",
         body: JSON.stringify(),
         headers: {
@@ -70,7 +70,7 @@ UpdateDataCategoria = async (id_Categoria, nombreCat) => {
 
 
 DeleteFisic_Categoria = async (id_Categoria) => {
-    await fetch("https://localhost:7281/Categoria/DeleteCategoria?id1=" + id_Categoria, {
+    await fetch("https://microservicios-erp-udinova.azurewebsites.net/Categoria/DeleteCategoria?id1=" + id_Categoria, {
         method: "POST",
         body: JSON.stringify(),
         headers: {
